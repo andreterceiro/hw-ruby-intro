@@ -37,6 +37,7 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  !!/\A(0|[01]+0{2})\z/.match(s)
 end
 
 # Part 3
