@@ -43,5 +43,24 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  attr_reader :isbn, :price
+
+  def initialize user_isbn, user_price
+     self.isbn= user_isbn
+     self.price= user_price
+  end
+  
+  def isbn= user_isbn
+    raise ArgumentError unless ((user_isbn.is_a? String) && user_isbn.size > 0)
+    @isbn = user_isbn 
+  end
+
+  def price= user_price
+    raise ArgumentError unless ((user_price.is_a? Numeric) && user_price > 0)
+    @price = user_price
+  end
+
+  def price_as_string
+    sprintf("$%#.2f", @price)
+  end
 end
