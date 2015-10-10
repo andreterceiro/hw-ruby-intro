@@ -32,7 +32,7 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  
+  !!/\A[bcdfghjklmnpqrstvwxz]+/.match(s.downcase)
 end
 
 def binary_multiple_of_4? s
